@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox Studies</title>
+  </head>
+
+  <style>
+    * {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 500;
+      background-color: rgb(31, 49, 83);
+    }
+    div.container {
+      width: 100%;
+      background-color: transparent;
+      height: 15vh;
+      display: flex;
+      align-items:center;
+      border-radius: 15px;
+      justify-content: space-evenly;
+      
+    } 
+
+    a{
+        position: relative;
+        text-decoration: none;
+        color:rgba(109, 196, 188, 0.897);
+        font-size: 15px;   
+        background-color: transparent;     
+    }
+
+    a::after {
+        content: "";
+        position: absolute;
+        background-color: rgba(199, 191, 195, 0.336);
+        height: 4px;
+        width: 0%;
+        left: 0;
+        bottom: -3px;
+        transition: 0.5s;
+    }
+    a:hover{
+        color: rgb(193, 212, 158);
+        transition: 0.3s;
+    }
+
+    a:hover::after{
+        width: 85%;
+    }
+
+    div.container img{  
+       height: 92px;
+       border-radius: 75px;
+    }
+
+  </style>
+
+  <body>
+
+    <div class="container"> 
+        
+            <img src="./smalpic.jpg">       
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Experiences</a>
+        <a href="#">Contact</a>  
+        
+    </div>
+
+  </body>
+</html>
